@@ -1,0 +1,250 @@
+/* Plan Cards Style */  
+/* From Uiverse.io by Yaya12085 */  
+.plan {  
+  border-radius: 16px;  
+  box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);  
+  padding: 10px;  
+  background-color: #fff;  
+  color: #697e91;  
+  max-width: 400px;  
+  margin: 0 auto; /* Center the card */  
+}  
+
+.plan strong {  
+  font-weight: 600;  
+  color: #425275;  
+}  
+
+.plan .inner {  
+  align-items: center;  
+  padding: 20px;  
+  padding-top: 40px;  
+  background-color: #ecf0ff;  
+  border-radius: 12px;  
+  position: relative;  
+  width: 100%; /* Changed to 100% for responsiveness */  
+  max-width: 450px; /* Maintain max-width */  
+}  
+
+.plan .pricing {  
+  position: absolute;  
+  top: 0;  
+  right: 0;  
+  background-color: #bed6fb;  
+  border-radius: 50px 16px 0 50px;  
+  display: flex;  
+  align-items: center;  
+  padding: 0.625em 16px 16px 0.75em;  
+  font-size: 1.25rem;  
+  font-weight: 600;  
+  color: #425475;  
+}  
+
+.plan .pricing small {  
+  color: #707a91;  
+  font-size: 0.75em;  
+  margin-left: 0.25em;  
+}  
+
+.plan .title {  
+  font-weight: 600;  
+  font-size: 1.25rem;  
+  color: #425675;  
+}  
+
+.plan .title + * {  
+  margin-top: 0.75rem;  
+}  
+
+.plan .info + * {  
+  margin-top: 1rem;  
+}  
+
+.plan .features {  
+  display: flex;  
+  flex-direction: column;  
+  padding-left: 0px;  
+}  
+
+.plan .features li {  
+  display: flex;  
+  align-items: center;  
+  gap: 0.5rem;  
+}  
+
+.plan .features li + * {  
+  margin-top: 0.75rem;  
+}  
+
+.plan .features .icon {  
+  background-color: #1FCAC5;  
+  display: inline-flex;  
+  align-items: center;  
+  justify-content: center;  
+  color: #fff;  
+  border-radius: 50%;  
+  width: 20px;  
+  height: 20px;  
+}  
+
+.plan .features .icon svg {  
+  width: 14px;  
+  height: 14px;  
+}  
+
+.plan .features + * {  
+  margin-top: 1.25rem;  
+}  
+
+.plan .action {  
+  width: 100%;  
+  display: flex;  
+  align-items: center;  
+  justify-content: end;  
+}  
+
+.plan .button {  
+  background-color: #6558d3;  
+  border-radius: 6px;  
+  color: #fff;  
+  font-weight: 500;  
+  font-size: 1.125rem;  
+  text-align: center;  
+  border: 0;  
+  outline: 0;  
+  width: 100%;  
+  padding: 0.625em 0.75em;  
+  text-decoration: none;  
+}  
+
+.plan .button:hover,  
+.plan .button:focus {  
+  background-color: #4133B7;  
+}  
+
+/* Responsive Design */  
+@media (max-width: 600px) {  
+  .plan {  
+    max-width: 90%; /* Allow for more width on small screens */  
+    margin-top: 20px; /* Spacing for smaller devices */  
+  }  
+
+  .plan .inner {  
+    max-width: 100%; /* Set max width based on viewport */  
+  }  
+
+  .plan .pricing {  
+    font-size: 1rem; /* Reduce font size for smaller screens */  
+    padding: 0.5em 10px 10px 0.5em; /* Adjust padding */  
+  }  
+
+  .plan .title {  
+    font-size: 1.125rem; /* Adjust title size */  
+  }  
+
+  .plan .button {  
+    font-size: 1rem; /* Make button font smaller */  
+    padding: 0.5em 0.5em; /* Adjust padding */  
+  }  
+}  
+
+@media (max-width: 400px) {  
+  .plan .pricing {  
+    padding: 0.5em 8px 8px 0.5em; /* Further adjust for very small screens */  
+  }  
+
+  .plan .features .icon {  
+    width: 16px; /* Smaller icon size */  
+    height: 16px;  
+  }  
+
+  .plan .features .icon svg {  
+    width: 12px; /* Smaller svg size */  
+    height: 12px;  
+  }  
+}  
+
+/* Price Cards Container Styles */  
+.price-cards-container {  
+  display: flex;  
+  flex-wrap: nowrap;  
+  overflow-x: auto;  
+  gap: 20px;  
+  padding-bottom: 20px;  
+  margin-left:15px;  
+  margin-right: 15px;  
+  scroll-snap-type: x mandatory;  
+  -webkit-overflow-scrolling: touch;  
+  user-select: none;  
+  cursor: grab;  
+}  
+
+.price-cards-container::-webkit-scrollbar {  
+  display: none;  
+}  
+
+.price-cards-container.dragging {  
+  cursor: grabbing;  
+  scroll-snap-type: none;  
+}  
+
+.plan {  
+  flex: 0 0 auto;  
+  border-radius: 16px;  
+  box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);  
+  padding: 10px;  
+  background-color: #fff;  
+  color: #697e91;  
+  max-width: 450;  
+  width: 90%;  
+  user-select: none;  
+  transition: transform 0.5s ease, box-shadow 0.5s ease;  
+  scroll-snap-align: center;  
+}  
+
+.plan.center {  
+  transform: scale(1.1);  
+  box-shadow: 0 40px 40px -30px rgba(0, 38, 255, 0.3);  
+  z-index: 1;  
+}  
+
+.plan:not(.center) {  
+  transform: scale(0.9);  
+  box-shadow: 0 20px 20px -15px rgba(0, 38, 255, 0.1);  
+}  
+
+@media (min-width: 768px) {  
+  .price-cards-container {  
+    gap: 40px;  
+  }  
+
+  .plan {  
+    width: 300px;  
+  }  
+
+  .plan.center {  
+    transform: scale(1.2);  
+  }  
+
+  .plan:not(.center) {  
+    transform: scale(0.8);  
+  }  
+}  
+
+@media (max-width: 767px) {  
+  .price-cards-container {  
+    padding-bottom: 40px;  
+  }  
+
+  .plan {  
+    width: 80%;  
+  }  
+
+  .plan.center {  
+    transform: scale(1.1);  
+  }  
+
+  .plan:not(.center) {  
+    transform: scale(0.9);  
+  }  
+}  
